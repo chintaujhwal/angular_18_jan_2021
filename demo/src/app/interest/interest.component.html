@@ -1,1 +1,9 @@
-<p>interest works!</p>
+<h2>Interest Calculation</h2>
+Amount <br/>
+<input type="number" #amount />
+<p></p>
+Interest Rate <br/>
+<input type="number" #rate />
+<p></p>
+<button (click)="calculate(amount.value,rate.value)">Calculate Interest</button>
+<h3>{{interest}}</h3>

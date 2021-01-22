@@ -1,4 +1,17 @@
 <h1>Course Details</h1>
 
+<h1 [innerHTML]="title"></h1>
+
 <h2>Title : {{title}} </h2>
 <h2>Trainer : {{trainer}} </h2>
+
+<h2>Topics</h2>
+
+<ul>
+    <li *ngFor="let topic of topics">
+         {{topic}} <button (click)="deleteTopic(topic)">Delete</button>
+    </li>
+</ul>
+
+Topic <input type="text" #topic/>
+<button (click)="addTopic(topic.value)">Add</button>
