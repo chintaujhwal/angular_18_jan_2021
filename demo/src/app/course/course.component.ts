@@ -15,12 +15,21 @@ export class CourseComponent {
     addTopic(topic : string) 
     {
         // makes sure topic is unique 
+        if (this.topics.includes(topic))
+        {
+          alert("Topics is already existing!")
+          return;
+        }
+
         this.topics.push(topic)
     }
 
     deleteTopic(topic : string) {
         console.log(topic)
-        // assignment 
+        // find index of topic
+        var idx = this.topics.indexOf(topic)
+        this.topics.splice(idx,1)
+
     }
 
 }
