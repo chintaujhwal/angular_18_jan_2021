@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DirectivesComponent } from './directivesdemo/directives.component';
-import { CourseComponent } from './course/course.component';
+import { PipesDemoComponent } from './pipes/pipesdemo.component';
+import { BracketsPipe } from './pipes/brackets.pipe';
 
 
 @NgModule({
   declarations: [
-    DirectivesComponent,
-    CourseComponent
+    PipesDemoComponent,
+    BracketsPipe
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [CourseComponent]
+  bootstrap: [PipesDemoComponent]
 })
 export class AppModule { }
