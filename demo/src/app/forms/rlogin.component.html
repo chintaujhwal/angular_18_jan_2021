@@ -14,6 +14,10 @@
     <span *ngIf="loginForm.controls.username.dirty && loginForm.controls.username.errors?.required">
            Username must be entered!
     </span>
+    <span *ngIf="loginForm.controls.username.dirty && loginForm.controls.username.errors?.minlength">
+       Please enter a minimum of 4 chars!
+    </span>
+
     <p></p>
     Password <br/>
     <input type="password" formControlName="password" />

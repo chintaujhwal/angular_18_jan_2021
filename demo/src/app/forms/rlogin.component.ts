@@ -9,15 +9,22 @@ export class RLoginComponent {
     
     loginForm: FormGroup;
     submitted : boolean  = false; 
+
     constructor(private fb: FormBuilder) {
         // Create FormGroup 
         this.loginForm = this.fb.group(
-            {
-                username: ["Abcd", Validators.compose
-                    ([ Validators.required, 
+            {   
+                username:   // FormControl 
+                    ["Abcd", 
+                    Validators.compose(
+                     [ Validators.required, 
                        Validators.pattern("[A-Za-z]+"), 
-                       Validators.minLength(4)])],
-                password: ["", 
+                       Validators.minLength(4)
+                     ]
+                    )
+                    ],
+                password:  // FormControl 
+                    ["", 
                      Validators.compose
                      (
                       [Validators.required,  // Predefined validator 
@@ -50,18 +57,18 @@ export class RLoginComponent {
             return null;  // success
 
         if (formControl.value.indexOf('*') < 0)  // star not found
-            return {mustHaveStar: true, actualLength : formControl.value.length};  // Object on error
+            return {mustHaveStar: true, value : formControl.value};  // Object on error
 
         return null;  // Success, star is found 
     }
 
-    // Validator for form 
+    // Validator for form - Takes FormGroup and returns null or object 
     validateUsernamePassword(group : FormGroup) {
         var un = group.value['username']
         var pwd = group.value['password']
         if(un.length == pwd.length)
            return {'match' : 'Username and password are of same length' }  // Object on error 
         else
-           return null;
+           return null; // Success 
     }
 }
