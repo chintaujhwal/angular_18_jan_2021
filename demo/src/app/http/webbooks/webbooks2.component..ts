@@ -8,7 +8,7 @@ import { BooksService } from './BooksService';
     templateUrl: './webbooks2.component.html'
 })
 export class WebBooks2Component implements OnInit {
-    books: WebBook[];
+    books: WebBook[] = [];
    
     constructor(private booksService: BooksService) {
     }

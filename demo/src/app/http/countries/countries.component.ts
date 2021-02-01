@@ -16,9 +16,11 @@ export class CountriesComponent implements OnInit {
          // make AJAX request 
          this.http.get<Country[]>("https://restcountries.eu/rest/v2/all")
              .subscribe(
-                        (resp : Country[]) => this.countries = resp,
-                        (error) => console.log(error),
-                        null
+                        (resp : Country[]) => {
+                            this.countries = resp;
+                            console.log(this.countries);
+                        },
+                        (error) => console.log(error)
                        );
     }
 

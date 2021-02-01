@@ -3,15 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RegisterComponent } from './forms/register.component';
-import { RLoginComponent } from './forms/rlogin.component';
-import { BooksComponent } from './http/books/books.component';
-import { WebBooksComponent } from './http/webbooks/webbooks.component';
+import { AddBookComponent } from './http/add-book/add-book.component';
+import { CountriesComponent } from './http/countries/countries.component';
+import { WebBooks2Component } from './http/webbooks/webbooks2.component.';
 
 
 @NgModule({
   declarations: [
-     WebBooksComponent
+      CountriesComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +19,6 @@ import { WebBooksComponent } from './http/webbooks/webbooks.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [WebBooksComponent]
+  bootstrap: [CountriesComponent]
 })
 export class AppModule { }

@@ -20,7 +20,6 @@ export class WebBooksComponent implements OnInit {
                  error => console.log(error),
                  () => this.done = true
                  );
-       
 
     }
 }

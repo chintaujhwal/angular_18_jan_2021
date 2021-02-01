@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { WebBook } from '../http/Webbook';
+import { WebBook } from './WebBook';
 import { HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
@@ -15,7 +15,7 @@ export class BooksService {
     {
         return this.http.get<WebBook[]>(this.URL) 
                 .pipe(
-                   map((books : WebBook[]) => books.slice(0,5))                   
+                   map((books : WebBook[]) => books.slice(0,5)) 
                 );
     }
 
@@ -23,5 +23,6 @@ export class BooksService {
     {
         return this.http.get<WebBook>(this.URL + "/" + id);
     }
+    
     
 }

@@ -12,10 +12,12 @@
         <input name="Price" [(ngModel)]="book.Price" #price="ngModel" required>
         <p></p>
         <button [disabled]="bookForm.invalid">Add Book </button>
-        <div *ngif="inprocess">Processing....</div>
-
+        <div *ngIf="inprocess">Processing....</div>
     </form>
 
-    <h3 *ngIf="added && done">Book has been added successfully!</h3>
-    <h3 *ngIf="!added && done">Book was not added due to some error!!</h3>
+    <div *ngIf="done">
+        <h3 *ngIf="added">Book has been added successfully!</h3>
+        <h3 *ngIf="!added">Book was not added due to some error!!</h3>
+    </div>
+
 </body>
