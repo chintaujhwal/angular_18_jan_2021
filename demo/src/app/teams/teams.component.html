@@ -1,0 +1,13 @@
+ 
+<h2>List of Teams</h2>
+<h3 *ngFor="let team of teams">
+  {{team.name}} 
+  <a (click)="deleteTeam(team.id)"  href="javascript:void(0)">Delete</a>
+</h3>
+
+
+<h2>Add Team</h2>
+
+Team Name : <input type="text" #teamname/>
+<button (click)="addTeam(teamname.value)">Add Team</button>
+ 

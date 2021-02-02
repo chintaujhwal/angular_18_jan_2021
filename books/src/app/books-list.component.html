@@ -1,0 +1,24 @@
+<h2>Books</h2>
+
+
+<table cellpadding="5pt" width="100%" *ngIf="books?.length > 0">
+   <tr class="tabheader">
+      <th>Id </th>
+      <th>Title</th>
+      <th>Price </th>
+      <th>Actions</th>
+   </tr>
+
+   <tr *ngFor="let book  of books">
+      <td style="text-align: center">{{book.id}} </td>
+      <td style="text-align: center">{{book.title}} </td>
+      <td style="text-align: center">{{book.price}} </td>
+      <td style="text-align: center">
+         <button (click)="updateBook(book.id)">Edit</button>
+         &nbsp;
+         <button (click)="deleteBook(book.id)">Delete</button>
+      </td>
+   </tr>
+</table>
+
+<h3 *ngIf="books.length == 0 && done">Sorry! No books found! </h3>

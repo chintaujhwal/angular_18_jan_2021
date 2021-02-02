@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Python Tricks",
+      "price": 500
+    },
+    {
+      "id": 2,
+      "title": "Java Complete Reference",
+      "price": 650
+    },
+    {
+      "id": 3,
+      "title": "Programming in C",
+      "price": 350
+    },
+    {
+      "id": 5,
+      "title": "Spring in Action",
+      "price": "780"
+    }
+  ]
+}

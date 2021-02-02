@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'st-add-book',
-  templateUrl: 'add-book.component.html'
+  templateUrl: './add-book.component.html'
 })
 export class AddBookComponent {
   book: WebBook;
